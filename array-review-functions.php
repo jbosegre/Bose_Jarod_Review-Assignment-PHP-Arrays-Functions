@@ -33,7 +33,7 @@ function addedAnimal($newAnimal)
     array_push($animals, $newAnimal);
 }
 
-function cupcakeFlavor($pickFlavor)
+function cupcakeFlavor()
 {
     global $flavor;
     foreach($flavor as $taste => $description) {

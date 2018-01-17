@@ -7,8 +7,8 @@
  */
 
 //turn on error reporting
-ini_set('display_errors',1);
-error_reporting(E_ALL);
+//ini_set('display_errors',1);
+//error_reporting(E_ALL);
 
 ?>
 
@@ -27,7 +27,6 @@ error_reporting(E_ALL);
                Adding  <input type="text" name="addAnimal"> ...
                <br>
                <br>
-               <input type="checkbox" name="flavors[]"><br>
                <input type="submit" id="submit" value="add">
            </form>
 
@@ -48,19 +47,10 @@ error_reporting(E_ALL);
                         $isValid = false;
                     }
 
-                    if (!empty($_POST["flavors[]"]))
-                    {
-                        $flavoring = cupcakeFlavor($_POST["flavors[]"]);
-                    }
-                    else {
-                        echo "<p>please check at least on flavor</p>";
-                        $isValid = false;
-                    }
-
                     if ($isValid) {
                         echo "adding " .$_POST["addAnimal"].addedAnimal($added). "... <br>";
                         echo sortArray() . "<br><br>";
-                        echo cupcakeFlavor($flavoring);
+                        echo cupcakeFlavor();
                     }
                 }
          ?>
